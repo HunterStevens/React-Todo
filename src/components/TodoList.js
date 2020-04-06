@@ -7,12 +7,15 @@ import Todo from './Todo';
 const TodoList = props =>{
     return(
         <div>
-
             {props.taskItem.map(item=>{
-                <Todo key={item.id} item={item} checkTask = {props.checkTask} />
+                return(
+                <Todo key={item.id}
+                 item={item}
+                 checkTask={props.checkTask} />
+                )
             })}
         </div>
-    )
+    );
 }
 
 export default TodoList;

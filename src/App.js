@@ -50,7 +50,8 @@ class App extends React.Component {
         />
 
         <TodoList
-        taskItem={this.TaskList} 
+        taskItem={this.state.TaskList}
+        checkTask={this.clearCompleted} 
         />
       </div>
     );

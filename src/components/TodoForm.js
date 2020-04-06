@@ -9,12 +9,12 @@ class TodoForm extends React.Component{
     }
 
     change = event =>{
-        this.setState({ [e.target.name]:event.target.value })
+        this.setState({ [event.target.name]:event.target.value })
     }
 
     taskSubmit = event =>{
         event.preventDefault();
-        this.setState({ task: '' });
+        this.setState({ task:'' });
         this.props.addTask(event, this.state.task);
     }
 
