@@ -18,6 +18,11 @@ class TodoForm extends React.Component{
         this.props.addTask(event, this.state.task);
     }
 
+    clearCompleted = event =>{
+        event.preventDefault();
+        this.setState({})
+    }
+
     render(){
         console.log('rendering Form');
         return(
@@ -33,3 +38,4 @@ class TodoForm extends React.Component{
         )
     }
 }
+export default TodoForm;
